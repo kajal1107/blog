@@ -1,0 +1,8 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+<%= button_to 'Like', post_likes_path(@post), method: :post %><br>
+<%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%><br>
+
+<%= link_to "Back", posts_path %>
